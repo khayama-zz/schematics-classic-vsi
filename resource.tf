@@ -37,5 +37,5 @@ resource "ibm_compute_vm_instance" "khayama-test" {
     tags = ["user:khayama"]
     post_install_script_uri = "${var.post_install_script_uri}"
     notes = "khayama's Resource created by Schematics"
-    ssh_key_ids = ["1906764"]
+    ssh_key_ids = [1906764]
 }
