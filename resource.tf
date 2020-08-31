@@ -34,7 +34,7 @@ resource "ibm_compute_vm_instance" "khayama-test" {
     private_network_only = false
     flavor_key_name = "${var.flavor_key_name}"
     public_security_group_ids = [1287613]
-    tags = ["user:khayama"]
+    tags = ["owner:khayama"]
     post_install_script_uri = "${var.post_install_script_uri}"
     notes = "khayama's Resource created by Schematics"
     ssh_key_ids = [1906764]
