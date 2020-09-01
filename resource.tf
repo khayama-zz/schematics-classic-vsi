@@ -22,8 +22,14 @@ variable "post_install_script_uri" {
   default = ""
 }
 
+variable "hostname" {
+  type        = "string"
+  description = "Your hostname"
+  default = "khayama-test"
+}
+
 resource "ibm_compute_vm_instance" "khayama-test" {
-    hostname = "khayama-test"
+    hostname = "${var.hostname}"
     domain = "ibmcloud.com"
     os_reference_code = "${var.os_reference_code}"
     datacenter = "${var.datacenter}"
